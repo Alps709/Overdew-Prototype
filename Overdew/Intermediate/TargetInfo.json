@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Overdew",
+			"Path": "D:\\Github\\Overdew\\Source\\Overdew.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "OverdewEditor",
+			"Path": "D:\\Github\\Overdew\\Source\\OverdewEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
