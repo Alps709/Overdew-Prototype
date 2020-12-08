@@ -1,5 +1,5 @@
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Github\Overdew\Source\Overdew/OverdewPlayerController.h
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewPlayerController.generated.h
+D:\Github\Overdew-Prototype\Overdew\Source\Overdew/OverdewPlayerController.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewPlayerController.generated.h

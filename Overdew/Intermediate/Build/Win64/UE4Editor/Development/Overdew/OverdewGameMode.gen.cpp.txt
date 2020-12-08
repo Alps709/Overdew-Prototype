@@ -1,9 +1,9 @@
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Github\Overdew\Source\Overdew/OverdewGameMode.h
+D:\Github\Overdew-Prototype\Overdew\Source\Overdew/OverdewGameMode.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewGameMode.generated.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewGameMode.generated.h

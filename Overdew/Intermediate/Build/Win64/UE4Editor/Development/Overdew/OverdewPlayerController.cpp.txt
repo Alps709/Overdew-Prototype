@@ -1,6 +1,6 @@
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
-D:\Github\Overdew\Source\Overdew\OverdewPlayerController.h
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewPlayerController.generated.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Development\Overdew\Definitions.Overdew.h
+D:\Github\Overdew-Prototype\Overdew\Source\Overdew\OverdewPlayerController.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewPlayerController.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AIModule\Classes\Blueprint/AIBlueprintHelperLibrary.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIBlueprintHelperLibrary.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime/Engine/Classes/Components/DecalComponent.h
@@ -11,9 +11,9 @@ C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\HeadMountedDisplay\Public\IIdentifiableXRDevice.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\IIdentifiableXRDevice.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\HeadMountedDisplayFunctionLibrary.generated.h
-D:\Github\Overdew\Source\Overdew\OverdewCharacter.h
+D:\Github\Overdew-Prototype\Overdew\Source\Overdew\OverdewCharacter.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\Github\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewCharacter.generated.h
+D:\Github\Overdew-Prototype\Overdew\Intermediate\Build\Win64\UE4Editor\Inc\Overdew\OverdewCharacter.generated.h

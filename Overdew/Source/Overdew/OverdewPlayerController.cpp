@@ -18,10 +18,10 @@ void AOverdewPlayerController::PlayerTick(float DeltaTime)
 	Super::PlayerTick(DeltaTime);
 
 	// keep updating the destination every tick while desired
-	if (bMoveToMouseCursor)
-	{
-		MoveToMouseCursor();
-	}
+	//if (bMoveToMouseCursor)
+	//{
+	//	MoveToMouseCursor();
+	//}
 }
 
 void AOverdewPlayerController::SetupInputComponent()
@@ -29,14 +29,14 @@ void AOverdewPlayerController::SetupInputComponent()
 	// set up gameplay key bindings
 	Super::SetupInputComponent();
 
-	InputComponent->BindAction("SetDestination", IE_Pressed, this, &AOverdewPlayerController::OnSetDestinationPressed);
-	InputComponent->BindAction("SetDestination", IE_Released, this, &AOverdewPlayerController::OnSetDestinationReleased);
+	//InputComponent->BindAction("SetDestination", IE_Pressed, this, &AOverdewPlayerController::OnSetDestinationPressed);
+	//InputComponent->BindAction("SetDestination", IE_Released, this, &AOverdewPlayerController::OnSetDestinationReleased);
 
 	// support touch devices 
-	InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AOverdewPlayerController::MoveToTouchLocation);
-	InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AOverdewPlayerController::MoveToTouchLocation);
+	//InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AOverdewPlayerController::MoveToTouchLocation);
+	//InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AOverdewPlayerController::MoveToTouchLocation);
 
-	InputComponent->BindAction("ResetVR", IE_Pressed, this, &AOverdewPlayerController::OnResetVR);
+	//InputComponent->BindAction("ResetVR", IE_Pressed, this, &AOverdewPlayerController::OnResetVR);
 }
 
 void AOverdewPlayerController::OnResetVR()
