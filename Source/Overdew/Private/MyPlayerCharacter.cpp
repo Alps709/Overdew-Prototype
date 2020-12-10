@@ -3,10 +3,12 @@
 
 #include "MyPlayerCharacter.h"
 
+#include "GameFramework/CharacterMovementComponent.h"
 
 
 AMyPlayerCharacter::AMyPlayerCharacter()
 {
+    
     PrimaryActorTick.bCanEverTick = true;
 
     SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
@@ -17,6 +19,11 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 
     StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlayerMesh"));
     StaticMeshComponent->SetupAttachment(RootComponent);
+
+    //Set base sprint speed
+    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
+
+    SprintSpeed = TempCharacterMovement->MaxWalkSpeed * 1.5f;
 }
 
 void AMyPlayerCharacter::BeginPlay()
@@ -48,6 +55,20 @@ void AMyPlayerCharacter::MoveRight(float Value)
     }
 }
 
+void AMyPlayerCharacter::StartSprinting()
+{
+    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
+
+    WalkSpeed = TempCharacterMovement->MaxWalkSpeed;
+    TempCharacterMovement->MaxWalkSpeed = SprintSpeed;
+}
+
+void AMyPlayerCharacter::StopSprinting()
+{
+    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
+    TempCharacterMovement->MaxWalkSpeed = WalkSpeed;
+}
+
 void AMyPlayerCharacter::Die()
 {
 }
@@ -66,6 +87,9 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
     PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
     //Movement
-    PlayerInputComponent->BindAxis("MoveForward", this, &AMyPlayerCharacter::MoveRight);
+    PlayerInputComponent->BindAxis("MoveForward", this, &AMyPlayerCharacter::MoveForward);
     PlayerInputComponent->BindAxis("MoveRight", this, &AMyPlayerCharacter::MoveRight);
+
+    PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AMyPlayerCharacter::StartSprinting);
+    PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AMyPlayerCharacter::StopSprinting);
 }

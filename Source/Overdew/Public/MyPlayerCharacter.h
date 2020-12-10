@@ -38,6 +38,11 @@ protected:
 	UFUNCTION(BlueprintCallable, Category="Movement")
 	void MoveRight(float Value);
 
+	UFUNCTION(BlueprintCallable, Category="Movement")
+    void StartSprinting();
+	UFUNCTION(BlueprintCallable, Category="Movement")
+    void StopSprinting();
+
     virtual void Die() override;
 
 public:	
@@ -46,4 +51,14 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
+	float SprintSpeed;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
+	bool bIsSprinting;
+
+private:
+	//Save the walk speed of the movement component so it can be set back after sprinting
+	float WalkSpeed;
 };
