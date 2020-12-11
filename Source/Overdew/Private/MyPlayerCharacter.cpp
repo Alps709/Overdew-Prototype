@@ -8,7 +8,6 @@
 
 AMyPlayerCharacter::AMyPlayerCharacter()
 {
-    
     PrimaryActorTick.bCanEverTick = true;
 
     SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
@@ -40,7 +39,7 @@ void AMyPlayerCharacter::BeginPlay()
 
 void AMyPlayerCharacter::MoveForward(float Value)
 {
-    if(Controller && Value != 0)
+    if(Controller && Value != 0 && !bIsDashing)
     {
         const FRotator Rotation = Controller->GetControlRotation();
         const FRotator YawRotation(0, Rotation.Yaw, 0);
@@ -52,7 +51,7 @@ void AMyPlayerCharacter::MoveForward(float Value)
 
 void AMyPlayerCharacter::MoveRight(float Value)
 {
-    if(Controller && Value != 0)
+    if(Controller && Value != 0 && !bIsDashing)
     {
         const FRotator Rotation = Controller->GetControlRotation();
         const FRotator YawRotation(0, Rotation.Yaw, 0);

@@ -65,6 +65,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
 	float DashSpeed;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
+	bool bIsDashing;
+
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
 	float BaseAcceleration;
 
