@@ -52,13 +52,26 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//Save the walk speed of the movement component so it can be set back after sprinting
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
+	float BaseWalkSpeed;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
 	float SprintSpeed;
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
 	bool bIsSprinting;
 
-private:
-	//Save the walk speed of the movement component so it can be set back after sprinting
-	float WalkSpeed;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
+	float DashSpeed;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
+	float BaseAcceleration;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
+	float DashAcceleration;
+	
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
+    float BaseGroundFriction;
+	
 };

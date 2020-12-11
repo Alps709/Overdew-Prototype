@@ -20,15 +20,22 @@ AMyPlayerCharacter::AMyPlayerCharacter()
     StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlayerMesh"));
     StaticMeshComponent->SetupAttachment(RootComponent);
 
-    //Set base sprint speed
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
-
-    SprintSpeed = TempCharacterMovement->MaxWalkSpeed * 1.5f;
+    TempCharacterMovement->MaxWalkSpeed = 650.0f;
 }
 
 void AMyPlayerCharacter::BeginPlay()
 {
     Super::BeginPlay();
+    
+    //Set base sprint speed
+    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
+    BaseWalkSpeed = TempCharacterMovement->MaxWalkSpeed;
+    SprintSpeed = TempCharacterMovement->MaxWalkSpeed * 1.5f;
+    DashSpeed = SprintSpeed * 2.0f;
+    BaseAcceleration = TempCharacterMovement->MaxAcceleration;
+    DashAcceleration = BaseAcceleration * 2.5f;
+    BaseGroundFriction = TempCharacterMovement->GroundFriction;
 }
 
 void AMyPlayerCharacter::MoveForward(float Value)
@@ -57,16 +64,17 @@ void AMyPlayerCharacter::MoveRight(float Value)
 
 void AMyPlayerCharacter::StartSprinting()
 {
+    bIsSprinting = true;
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
-
-    WalkSpeed = TempCharacterMovement->MaxWalkSpeed;
     TempCharacterMovement->MaxWalkSpeed = SprintSpeed;
+    UE_LOG(LogTemp, Warning, TEXT("Walk speed: %f"), BaseWalkSpeed);
 }
 
 void AMyPlayerCharacter::StopSprinting()
 {
+    bIsSprinting = false;
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
-    TempCharacterMovement->MaxWalkSpeed = WalkSpeed;
+    TempCharacterMovement->MaxWalkSpeed = BaseWalkSpeed;
 }
 
 void AMyPlayerCharacter::Die()
@@ -90,6 +98,7 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
     PlayerInputComponent->BindAxis("MoveForward", this, &AMyPlayerCharacter::MoveForward);
     PlayerInputComponent->BindAxis("MoveRight", this, &AMyPlayerCharacter::MoveRight);
 
-    PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AMyPlayerCharacter::StartSprinting);
-    PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AMyPlayerCharacter::StopSprinting);
+    //Sprint now handled in blueprint
+    //PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AMyPlayerCharacter::StartSprinting);
+    //PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AMyPlayerCharacter::StopSprinting);
 }
