@@ -35,6 +35,7 @@ void AMyPlayerCharacter::BeginPlay()
     DashSpeed = SprintSpeed * 2.0f;
     BaseAcceleration = TempCharacterMovement->MaxAcceleration;
     DashAcceleration = BaseAcceleration * 2.5f;
+    BaseGroundFriction = TempCharacterMovement->GroundFriction;
 }
 
 void AMyPlayerCharacter::MoveForward(float Value)
@@ -97,6 +98,7 @@ void AMyPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
     PlayerInputComponent->BindAxis("MoveForward", this, &AMyPlayerCharacter::MoveForward);
     PlayerInputComponent->BindAxis("MoveRight", this, &AMyPlayerCharacter::MoveRight);
 
+    //Sprint now handled in blueprint
     //PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AMyPlayerCharacter::StartSprinting);
     //PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AMyPlayerCharacter::StopSprinting);
 }

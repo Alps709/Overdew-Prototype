@@ -71,4 +71,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Movement")
 	float DashAcceleration;
 	
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Movement")
+    float BaseGroundFriction;
+	
 };
