@@ -21,17 +21,19 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
     TempCharacterMovement->MaxWalkSpeed = 650.0f;
-    BaseWalkSpeed = TempCharacterMovement->MaxWalkSpeed;
     SprintSpeed = TempCharacterMovement->MaxWalkSpeed * 1.5f;
     DashSpeed = SprintSpeed * 2.0f;
-    BaseAcceleration = TempCharacterMovement->MaxAcceleration;
     DashAcceleration = BaseAcceleration * 2.5f;
-    BaseGroundFriction = TempCharacterMovement->GroundFriction;
 }
 
 void AMyPlayerCharacter::BeginPlay()
 {
     Super::BeginPlay();
+    
+    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
+    BaseWalkSpeed = TempCharacterMovement->MaxWalkSpeed;
+    BaseAcceleration = TempCharacterMovement->MaxAcceleration;
+    BaseGroundFriction = TempCharacterMovement->GroundFriction;
 }
 
 void AMyPlayerCharacter::MoveForward(float Value)
