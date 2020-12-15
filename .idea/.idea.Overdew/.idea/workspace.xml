@@ -14,9 +14,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/Overdew/Private/BaseCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/Overdew/Public/BaseCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/Overdew/Public/MyPlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/Overdew/Private/MyPlayerCharacter.cpp" />
       </list>
     </option>
@@ -28,6 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.Overdew">
     <configuration name="Overdew" type="CppProject" factoryName="C++ Project">

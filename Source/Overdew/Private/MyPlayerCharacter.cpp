@@ -21,20 +21,17 @@ AMyPlayerCharacter::AMyPlayerCharacter()
 
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
     TempCharacterMovement->MaxWalkSpeed = 650.0f;
-}
-
-void AMyPlayerCharacter::BeginPlay()
-{
-    Super::BeginPlay();
-    
-    //Set base sprint speed
-    UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
     BaseWalkSpeed = TempCharacterMovement->MaxWalkSpeed;
     SprintSpeed = TempCharacterMovement->MaxWalkSpeed * 1.5f;
     DashSpeed = SprintSpeed * 2.0f;
     BaseAcceleration = TempCharacterMovement->MaxAcceleration;
     DashAcceleration = BaseAcceleration * 2.5f;
     BaseGroundFriction = TempCharacterMovement->GroundFriction;
+}
+
+void AMyPlayerCharacter::BeginPlay()
+{
+    Super::BeginPlay();
 }
 
 void AMyPlayerCharacter::MoveForward(float Value)
@@ -67,6 +64,7 @@ void AMyPlayerCharacter::StartSprinting()
     UCharacterMovementComponent* TempCharacterMovement = GetCharacterMovement();
     TempCharacterMovement->MaxWalkSpeed = SprintSpeed;
     UE_LOG(LogTemp, Warning, TEXT("Walk speed: %f"), BaseWalkSpeed);
+    UE_LOG(LogTemp, Warning, TEXT("Walk speed: %f"), SprintSpeed);
 }
 
 void AMyPlayerCharacter::StopSprinting()
