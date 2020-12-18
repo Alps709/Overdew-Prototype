@@ -11,6 +11,7 @@ ABaseCharacter::ABaseCharacter()
 	Health = 100.0f;
 	Stamina = 100.0f;
 	bCanBeStunned = true;
+	bIsStunned = false;
 	bCanBeKnockedBack = true;
 	bIsDead = false;
 }

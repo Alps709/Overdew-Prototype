@@ -40,7 +40,7 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Combat")
 	bool bCanBeStunned;
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category="Combat")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Combat")
 	bool bIsStunned;
 	
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Combat")
